@@ -14,6 +14,7 @@ game_tags = ["CraftCube", "Ttoomm", "D8nsku", "Melone", "Auf_Ov", "Om4r", "Gaspa
 
 
 swear = ["Helvetti", "Jumalauta", "Paska", "Perkele", "Saatana", "Vittu"]
+other_swear = ["Fuck", "Shit", "Bloody hell", "Scheiße", "Son of a bitch", "Asshole", "Bastard", "Bitch", "Cunt", "Dickhead"]
 
 xxx_tag = [0,1,2]
 gg_tag = [0,1]
@@ -108,6 +109,11 @@ async def on_message(message):
   #random kirosana
   elif user_message.lower() == "!ksana":
     await message.channel.send(f"{random.choice(swear)}")
+    return
+  
+  #random kirosana
+  elif user_message.lower() == "!swear":
+    await message.channel.send(f"{random.choice(other_swear)}")
     return
 
   #random kirosana combo
